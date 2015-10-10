@@ -1,0 +1,35 @@
+Problem: 
+Locations(GPS co-ordinates)  of 3 ports are given. There are 10 different locaitons where raw materials are produced. 
+Find the best possible location of the port, so that transportation cost is minimum.
+
+Given: 
+sqllite3 database which has tables location and port is given.
+
+
+Alogirthm:
+Step1)compute the distance from each loaction to port1. 
+Step2)Mutiply the distance with tonnage. This is the weight/cost of the route.
+Step3)Add up all the costs, to get the cost for the port1.
+Step4)Repeat the above step1 to step3 for port2 and port3.
+Step5)Get the port with least cost and display it's co-ordinates as the best port
+
+
+Python Program:
+
+Step1: Import the db using the command
+	C:\Sqlite\sqlite3.exe renewable.db
+
+Step2: .tables command on sqlite command prompt tells that there are two tables in the db
+1)location 
+2)ports
+
+
+Step3: connect to the renewable database using sqlite3.connect
+Step4: Read the data from the tables into pandas dataframe using pandas read_sql_query
+Step5: Define a method to caluculate the distance between two sets of co-ordinates. Use Havesine formula to calculate it.
+Step6: for every port1, calculate the distance from every loaction. Multiply distance with tonnage to get cost.
+Step7: Add all the costs for every port and store in a list
+Step8: Get the index of the list with least cost using list.min() 
+Step9: Print the co-ordinates of the port with least cost.
+
+ 
