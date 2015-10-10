@@ -53,6 +53,6 @@ for i in df_p.index:
 bestportindex= totalcostofport.index(min(totalcostofport))   
      
 #print the co-ordinates of the port with least transportation cost
-print 'Port with minimal transportation cost is @ (longitude,latitude): %f,%f' %(df_p.iat[bestportindex,0],df_p.iat[bestportindex,1])
+print 'Port with least/minimal transportation cost is @  (longitude,latitude) : %f,%f' %(df_p.iat[bestportindex,0],df_p.iat[bestportindex,1])
 
 
